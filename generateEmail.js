@@ -12,7 +12,7 @@ function makeEmail(team, users, official) {
 
     for (user of users) {
         if (user[0] !== "") {
-            email += d + `<p> name: ${user[0]} student number: ${user[1]} email: ${user[2]}</p>` + cd
+            email += d + `<p> Name: <b>${user[0]}</b>, Student number: <b>${user[1]}</b>, Email: <b>${user[2]}</b></p>` + cd
         }
     }
     email += '<p>For more information about the event please check the updates at https://tapc.ia.utwente.nl/</p>'
