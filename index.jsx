@@ -19,13 +19,13 @@ let db = new sqlite3.Database('./database.db', (err) => {
 });
 
 app.post('/register', (req, res) => {
-    console.log(req.body);
 
     if (!validate(req)) {
         // TODO: be mad
     }
 
     // Add participants into database
+    // First store users into an array to later insert it into the database
     persons = [];
     if (req.body.email1 !== "") {
         persons.push([req.body.name1, req.body.email1, req.body.number1]);
@@ -36,7 +36,6 @@ app.post('/register', (req, res) => {
     if (req.body.email3 !== "") {
         persons.push([req.body.name3, req.body.email3, req.body.number3]);
     }
-    console.log(persons);
     // Insert data into database, query based on amount of participants in the team
     if (persons.length == 1) {
         db.run("INSERT INTO ParticipantEntries(Name1, Mail1, Number1) VALUES(?,?,?)", [persons[0][0], persons[0][1], persons[0][2]]);
