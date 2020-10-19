@@ -43,7 +43,7 @@ app.post('/register', (req, res) => {
     }
 
     // Email targets
-    const tos = ["tapc2020@inter-actief.net"];
+    const tos = [];
 
     if (req.body.email1 !== "") {
         tos.push(req.body.email1);
@@ -118,7 +118,7 @@ app.post('/register', (req, res) => {
 
 
 app.listen(config.port, () => {
-    console.log(`Listening at http://localhost:${config.port}`)
+    console.log(`Listening at port: ${config.port}`)
 })
 
 function validate(persons, t) {
