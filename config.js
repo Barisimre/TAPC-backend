@@ -16,7 +16,7 @@ config.database = {
 config.email = {
     host: 'smtp.utwente.nl',
     port: 25,
-    from: 'ICTSV Inter-Actief <tkp@inter-actief.net>'
+    from: 'ICTSV Inter-Actief <tapc2020@inter-actief.net>'
 }
 
 
