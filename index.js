@@ -43,7 +43,7 @@ app.post('/register', (req, res) => {
     }
 
     // Email targets
-    const tos = [];
+    const tos = ['tapc2020@inter-actief.net'];
 
     if (req.body.email1 !== "") {
         tos.push(req.body.email1);
